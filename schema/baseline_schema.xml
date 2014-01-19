@@ -8,26 +8,26 @@
     <changeSet id="1" author="Roshan Kulkarni">
         <!-- Enterprise Table -->
         <createTable tableName="enterprise">
-            <column name="id" type="int">
+            <column name="id" type="int" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="name" type="varchar(50)">
                 <constraints nullable="false"/>
             </column>
             <column name="location" type="varchar(50)">
-                <constraints nullable="false"/>
+                <constraints nullable="true"/>
             </column>            
         </createTable>
         <!-- Employee Table -->
         <createTable tableName="employee">
-            <column name="id" type="int">
+            <column name="id" type="int" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="name" type="varchar(50)">
                 <constraints nullable="false"/>
             </column>
             <column name="title" type="varchar(50)">
-                <constraints nullable="false"/>
+                <constraints nullable="true"/>
             </column>            
         </createTable>
     </changeSet>
