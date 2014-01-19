@@ -3,13 +3,21 @@ Accelerate Your Spring Projects with This Spring Baseline Code
 
 This is a baseline Spring project. It helps you accelerate the development of new Spring projects.
 
+Version Summary
+-
+These are the versions of the various libraries, frameworks, dependencies used by this baseline project:
+Maven: 3.0
+Spring: 3.1.1.RELEASE
+Jetty: 9.1.1
+Jackson: 1.9.12 
+
 Maven Based Build
 -
 Maven is a the standardized build tool for this Spring project. It helps standardize the project directory structure, and also helps in managing the dependencies required for this project.
 
 Maven Jetty Plugin
 -
-The Maven POM file in this project includes a Jetty plugin. This gives the developer the convenience to quickly run the WebApp within a Jetty container. It is also cnofigured for periodic refresh, which means the developer can edit a few lines of code and test immediately without needing a full WAR redeployment.
+The Maven POM file in this project includes a Jetty plugin. This gives the developer the convenience to quickly run the WebApp within a Jetty container. It is also configured for periodic refresh, which means the developer can edit a few lines of code and test immediately without needing a full WAR redeployment.
 
 Spring MVC
 -
