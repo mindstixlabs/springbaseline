@@ -62,6 +62,16 @@ DTOs for the REST API
 -
 The "data model" for the JSON objects is defined in the "DTO" package. These are simply Java beans which get serialized to JSON. Your Controller classes can return the "object tree" of these DTO objects, and Spring takes care of the rest of the job (Traversing the DTO Object Tree to generate Serialized JSON). We've included a dependency to the Jackson JSON Mapper to facilitate this.
 
+Invoking the REST API for Testing
+-
+Easiest way is to use command line CURL. The client sends the datatype that it "accepts". The ContentNegotiation mechanism automatically determines whether to convert the REST resource to JSON or XML based on the "Accept" header received from the client.
+
+To receive an XML response from the REST API:
+`curl -i -H "Accept: application/xml" -X GET http://localhost:8080/sample/api/v1/employee`
+
+To receive a JSON response from the REST API:
+`curl -i -H "Accept: application/json" -X GET http://localhost:8080/sample/api/v1/employee`
+
 Logger Integration
 -
 The project integrates the Log4J logging library and provides as default configuration file for the logger. 
