@@ -11,7 +11,7 @@
     
     <properties>
         <!-- Spring Version -->
-        <spring.version>3.1.1.RELEASE</spring.version>
+        <spring.version>3.2.0.RELEASE</spring.version>
         
         <!-- Jetty Version: Adapt this to the latest stable version found in: -->
         <!-- http://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-maven-plugin/ -->
@@ -21,6 +21,14 @@
         
         <!-- Jackson JSON Mapper -->
         <jackson.version>1.9.12</jackson.version>
+        
+        <!-- MySQL Version -->
+        <!-- http://repo.maven.apache.org/maven2/mysql/mysql-connector-java/ -->
+        <mysql-version>5.1.28</mysql-version>
+        
+        <!-- Liquibase Maven Plugin Version -->
+        <!-- http://repo.maven.apache.org/maven2/org/liquibase/liquibase-maven-plugin/ -->
+        <mysql-version>3.0.8</mysql-version>
     </properties>
     
     <!-- Module Dependencies -->
@@ -56,12 +64,20 @@
             <artifactId>log4j</artifactId>
             <version>1.2.9</version>
         </dependency>
+        
+        <!-- MySQL Driver -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-version}</version>
+        </dependency>
     </dependencies>
     
     <!-- Build Configuration -->
     <build>
         <finalName>sample</finalName>
         <plugins>
+            
             <!-- Jetty Plugin for Maven -->
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
@@ -84,6 +100,24 @@
                     </webApp>
                 </configuration>
             </plugin>
+            
+            <!-- Liquibase Maven Plugin -->
+<!--            <plugin>
+                <groupId>org.liquibase</groupId>
+                <artifactId>liquibase-maven-plugin</artifactId>
+                <version>3.0.8</version>
+                <configuration>                  
+                    <propertyFile>schema/liquibase.properties</propertyFile>
+                </configuration>                
+                <executions>
+                    <execution>
+                        <phase>process-resources</phase>                                                                  
+                        <goals>
+                            <goal>update</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>-->
         </plugins>
     </build>
 </project>

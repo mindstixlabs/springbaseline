@@ -14,7 +14,7 @@ Version Summary
 -
 These are the versions of the various libraries, frameworks, dependencies used by this baseline project:
 + Maven: 3.0
-+ Spring: 3.1.1.RELEASE
++ Spring: 3.2.0.RELEASE
 + Jetty: 9.1.1
 + Jackson: 1.9.12 
 + Liquibase: 3.1.1
