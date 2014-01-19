@@ -29,7 +29,7 @@ public class SampleRESTController {
      *
      * @return Enterprise
      */
-    @RequestMapping(value = "/employee", method = RequestMethod.GET)
+    @RequestMapping(value = "/enterprise", method = RequestMethod.GET)
     @ResponseBody
     public Enterprise getEnterprise() {
 
@@ -60,7 +60,7 @@ public class SampleRESTController {
      * @param employeeId
      * @return Employee
      */
-    @RequestMapping(value = "/enterprise/{enterpriseId}", method = RequestMethod.GET)
+    @RequestMapping(value = "/employee/{employeeId}", method = RequestMethod.GET)
     @ResponseBody
     public Employee getEmployee(@PathVariable int employeeId) {
 
