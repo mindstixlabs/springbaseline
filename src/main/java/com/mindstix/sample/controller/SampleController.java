@@ -10,11 +10,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.ui.ModelMap;
 
 /**
- * Sample spring MVC controller.
+ * Sample MVC controller.
  *
  * @author: Roshan Kulkarni
  */
 @Controller
+@RequestMapping("/user")
 public class SampleController {
 
     // Get log4j handler

@@ -10,7 +10,17 @@
     <url>http://www.mindstix.com</url>
     
     <properties>
+        <!-- Spring Version -->
         <spring.version>3.1.1.RELEASE</spring.version>
+        
+        <!-- Jetty Version: Adapt this to the latest stable version found in: -->
+        <!-- http://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-maven-plugin/ -->
+        <!-- http://central.maven.org/maven2/org/eclipse/jetty/jetty-maven-plugin/ -->
+        <jetty.version>9.1.1.v20140108</jetty.version>
+        <jetty.port>9090</jetty.port>
+        
+        <!-- Jackson JSON Mapper -->
+        <jackson.version>1.9.12</jackson.version>
     </properties>
     
     <!-- Module Dependencies -->
@@ -33,6 +43,13 @@
             <version>${spring.version}</version>
         </dependency>
         
+        <!-- Jackson JSON Mapper -->
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        
         <!-- Log4j -->
         <dependency>
             <groupId>log4j</groupId>
@@ -47,19 +64,24 @@
         <plugins>
             <!-- Jetty Plugin for Maven -->
             <plugin>
-                <groupId>org.mortbay.jetty</groupId>
+                <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
+                <version>${jetty.version}</version>
                 <configuration>
-                    <scanIntervalSeconds>10</scanIntervalSeconds>
-                    <webApp>
-                        <contextPath>/test</contextPath>
-                    </webApp>
-                    <!-- TODO: Move this to an external Jetty XML -->
+                    <!-- Jetty Container Config Connector -->                
                     <connectors>
                         <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
-                            <port>9090</port>                            
+                            <maxIdleTime>3600000</maxIdleTime>
+                            <port>${jetty.port}</port>
                         </connector>
                     </connectors>
+                    <!-- Jetty Container Config: Auto Reload -->
+                    <reload>automatic</reload>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
+                    <!-- Web App Configuration: Context Path -->
+                    <webApp>
+                        <contextPath>/sample</contextPath>
+                    </webApp>
                 </configuration>
             </plugin>
         </plugins>
