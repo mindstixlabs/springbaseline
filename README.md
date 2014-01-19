@@ -1,7 +1,7 @@
-Springboard: Accelerate Your Spring Development with This Baseline Code
+Springboard: Accelerate Your Spring Development 
 =
 
-This is a baseline Spring project. It helps you accelerate the development of new Spring projects. Here is what we really set out to achieve with this project:
+This is a baseline Spring project that helps you accelerate the development of new Spring projects. Here is what we planned to achieve with this baseline project:
 
 + Single-click, repeatable build process using Maven
 + A working Baseline of Spring MVC to Develop Web GUI Applications
