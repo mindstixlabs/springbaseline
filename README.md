@@ -69,4 +69,4 @@ Design Principles
 
 4. Developers go thru a "Edit-Build-Run-Test" cycle a zillion times a day. In the interest of developer productivity, we have to make this cycle very efficient. Make it less painful for the developers to make quick edits and test them, without painful deployment steps.
 
-5. Separate configuration from business logic. Provide a standard way to "externalize" configuration and refernce it in your business logic.
+5. Separate configuration from business logic. Provide a standard way to "externalize" configuration and reference it in your business logic.
