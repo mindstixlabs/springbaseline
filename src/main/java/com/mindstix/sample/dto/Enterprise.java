@@ -3,11 +3,14 @@
  */
 package com.mindstix.sample.dto;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  * Enterprise DTO: Represents an Enterprise Entity.
  *
  * @author roshan
  */
+@XmlRootElement
 public class Enterprise {
 
     private String name;

@@ -3,11 +3,14 @@
  */
 package com.mindstix.sample.dto;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  * Employee DTO: Represents an Employee Entity.
  *
  * @author roshan
  */
+@XmlRootElement
 public class Employee {
 
     private int employeeId;

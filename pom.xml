@@ -21,6 +21,9 @@
         
         <!-- Jackson JSON Mapper -->
         <jackson.version>1.9.12</jackson.version>
+        
+        <!-- JAXB Mapper -->
+        <jaxb.version>2.2.11</jaxb.version>
     </properties>
     
     <!-- Module Dependencies -->
@@ -43,11 +46,19 @@
             <version>${spring.version}</version>
         </dependency>
         
-        <!-- Jackson JSON Mapper -->
+        <!-- Jackson JSON Mapper: Conversion of REST DTOs to JSON -->
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-mapper-asl</artifactId>
             <version>${jackson.version}</version>
+        </dependency>
+        
+        <!-- JAXB: Conversion of REST DTOs to XML -->
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>${jaxb.version}</version>
+            <scope>runtime</scope>
         </dependency>
         
         <!-- Log4j -->
