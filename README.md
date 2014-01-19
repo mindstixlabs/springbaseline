@@ -9,6 +9,7 @@ This is a baseline Spring project that helps you accelerate the development of n
 + A working Baseline of XML REST APIs
 + Integrated Log4J Logger
 + Integrated Jetty Plugin to help accelerate your "dev-build-test" cycles
++ A multi-layered architecture comprising of Controller > Services > DAO > Models
 
 Version Summary
 -
