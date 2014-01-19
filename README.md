@@ -17,6 +17,7 @@ These are the versions of the various libraries, frameworks, dependencies used b
 + Spring: 3.1.1.RELEASE
 + Jetty: 9.1.1
 + Jackson: 1.9.12 
++ Liquibase: 3.1.1
 
 Maven Based Build
 -
