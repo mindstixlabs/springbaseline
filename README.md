@@ -1,10 +1,14 @@
-Accelerate Your Spring Projects with This Spring Baseline Code
+Springboard: Accelerate Your Spring Development with This Baseline Code
 =
 
 This is a baseline Spring project. It helps you accelerate the development of new Spring projects. Here is what we are really set out to achieve with this project:
-+ A single-click, predictable, repeatable build process
-+ Standard Spring MVC Support to Develop Web GUI Applications in Spring
-+ Support for Building REST APIs via Spring (Both JSON and XML Support)
+
++ Single-click, repeatable build process using Maven
++ A working Baseline of Spring MVC to Develop Web GUI Applications
++ A working Baseline of JSON REST APIs
++ A working Baseline of XML REST APIs
++ Integrated Log4J Logger
++ Integrated Jetty Plugin to help accelerate your "dev-build-test" cycles
 
 Maven Based Build
 -
