@@ -1,7 +1,10 @@
 Accelerate Your Spring Projects with This Spring Baseline Code
 =
 
-This is a baseline Spring project. It helps you accelerate the development of new Spring projects.
+This is a baseline Spring project. It helps you accelerate the development of new Spring projects. Here is what we are really set out to achieve with this project:
++ A single-click, predictable, repeatable build process
++ Standard Spring MVC Support to Develop Web GUI Applications in Spring
++ Support for Building REST APIs via Spring (Both JSON and XML Support)
 
 Maven Based Build
 -
