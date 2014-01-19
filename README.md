@@ -81,6 +81,23 @@ To receive an XML response from the REST API:
 To receive a JSON response from the REST API:
 `curl -i -H "Accept: application/json" -X GET http://localhost:8080/sample/api/v1/employee`
 
+
+Liquibase for DB Schema Management
+-
+Your DB schemas become much more portable using Liquibase. Liquibase also helps port DB Changesets across multiple environments. This project integrates the Maven Liquibase plugin to help you quickly bootstrap and manage your DB schema evolution.
+
+All Liquibase properties can be configured here:
+
+`schema/liquibase.properties`
+
+Your DB ChangeSets can be configured here:
+
+`schema/baseline_schema.xml`
+
+To apply your Changesets, use the following command:
+`$ mvn liquibase:update`
+
+
 Logger Integration
 -
 The project integrates the Log4J logging library and provides as default configuration file for the logger. 
